@@ -3,7 +3,7 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "Position Extension": "github:mehmetakifakkus/position-extension#854e9fe848eab4016d951decd7c308026f63a4e9"
+        "Position Extension": "github:mehmetakifakkus/position-extension#96ed29c93c684b77b5962a709460e3aca56561e5"
     },
     "files": [
         "main.blocks",
