@@ -1,8 +1,9 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     dir = 0
+    snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 180))
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    snake.setImage(Rotate.rotateNormal(sprites.food.smallApple, 90))
+    snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 270))
 })
 function advance () {
     if (dir == 0) {
@@ -24,21 +25,23 @@ function createSnake () {
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     dir = 3
+    snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 90))
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     dir = 1
+    snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 270))
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     dir = 2
+    snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 0))
 })
 let snakePos: Position.Position = null
 let snake: Sprite = null
 let dir = 0
-scene.setBackgroundColor(4)
 tiles.setTilemap(tilemap`level1`)
 createSnake()
-tiles.setTileAt(tiles.getTileLocation(0, 0), assets.tile`transparency16`)
 dir = 1
+snake.setImage(Rotate.rotateNormal(assets.image`myImage`, 270))
 game.onUpdateInterval(500, function () {
     advance()
 })
